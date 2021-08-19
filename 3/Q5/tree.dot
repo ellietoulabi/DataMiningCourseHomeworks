@@ -1,0 +1,24 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label="Serum_thyroxin <= 11.0\ngini = 0.5\nsamples = 230\nvalue = [114, 116]\nclass = Outcome2", fillcolor="#fcfdff"] ;
+1 [label="gini = 0.0\nsamples = 96\nvalue = [96, 0]\nclass = Outcome1", fillcolor="#e58139"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Serum_triiodothyronine <= 1.55\ngini = 0.233\nsamples = 134\nvalue = [18, 116]\nclass = Outcome2", fillcolor="#58ace9"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="gini = 0.0\nsamples = 8\nvalue = [8, 0]\nclass = Outcome1", fillcolor="#e58139"] ;
+2 -> 3 ;
+4 [label="Abs_diff_TSH <= 2.204\ngini = 0.146\nsamples = 126\nvalue = [10, 116]\nclass = Outcome2", fillcolor="#4aa5e7"] ;
+2 -> 4 ;
+5 [label="Basal_TSH <= 1.9\ngini = 0.079\nsamples = 121\nvalue = [5, 116]\nclass = Outcome2", fillcolor="#42a1e6"] ;
+4 -> 5 ;
+7 [label="Serum_thyroxin <= 12.95\ngini = 0.064\nsamples = 120\nvalue = [4, 116]\nclass = Outcome2", fillcolor="#40a0e6"] ;
+5 -> 7 ;
+9 [label="gini = 0.278\nsamples = 24\nvalue = [4, 20]\nclass = Outcome2", fillcolor="#61b1ea"] ;
+7 -> 9 ;
+10 [label="gini = 0.0\nsamples = 96\nvalue = [0, 96]\nclass = Outcome2", fillcolor="#399de5"] ;
+7 -> 10 ;
+8 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = Outcome1", fillcolor="#e58139"] ;
+5 -> 8 ;
+6 [label="gini = 0.0\nsamples = 5\nvalue = [5, 0]\nclass = Outcome1", fillcolor="#e58139"] ;
+4 -> 6 ;
+}
